@@ -1,4 +1,4 @@
-# IF0009-Lab13-carnet â€” MedPharm Express
+# IF0009-Lab13-C5L811 â€” MedPharm Express
 
 Proyecto del Laboratorio 13 de Desarrollo de Software IV.
 
@@ -164,16 +164,16 @@ feat(angular): add reactive recipe forms and signals dashboard
 
 ## 14. Resultado de la prueba JWT
 
-Durante la prueba de depuración se desactivó temporalmente el uthInterceptor en Angular. Al realizar una solicitud a GET /api/v1/recetas, la petición fue enviada sin la cabecera Authorization: Bearer <token>.
+Durante la prueba de depuraciï¿½n se desactivï¿½ temporalmente el uthInterceptor en Angular. Al realizar una solicitud a GET /api/v1/recetas, la peticiï¿½n fue enviada sin la cabecera Authorization: Bearer <token>.
 
-Debido a que el endpoint está protegido por Spring Security, el servidor rechazó la solicitud al no recibir un JWT válido. La evidencia de esta prueba se encuentra en docs/error_jwt_401.png.
+Debido a que el endpoint estï¿½ protegido por Spring Security, el servidor rechazï¿½ la solicitud al no recibir un JWT vï¿½lido. La evidencia de esta prueba se encuentra en docs/error_jwt_401.png.
 
-Después de la prueba, se restauró el interceptor en pp.config.ts mediante withInterceptors([authInterceptor]). Con el interceptor activo, Angular agrega automáticamente el JWT a las solicitudes protegidas.
+Despuï¿½s de la prueba, se restaurï¿½ el interceptor en pp.config.ts mediante withInterceptors([authInterceptor]). Con el interceptor activo, Angular agrega automï¿½ticamente el JWT a las solicitudes protegidas.
 
 
-## 15. Verificación final
+## 15. Verificaciï¿½n final
 
-Se verificó el funcionamiento de la autenticación JWT realizando el inicio de sesión con un usuario de prueba y utilizando el token obtenido para acceder a los endpoints protegidos de medicamentos y recetas.
+Se verificï¿½ el funcionamiento de la autenticaciï¿½n JWT realizando el inicio de sesiï¿½n con un usuario de prueba y utilizando el token obtenido para acceder a los endpoints protegidos de medicamentos y recetas.
 
-La solicitud sin token fue rechazada por Spring Security, mientras que la solicitud con la cabecera Authorization: Bearer <token> permitió acceder correctamente a los recursos protegidos.
+La solicitud sin token fue rechazada por Spring Security, mientras que la solicitud con la cabecera Authorization: Bearer <token> permitiï¿½ acceder correctamente a los recursos protegidos.
 
