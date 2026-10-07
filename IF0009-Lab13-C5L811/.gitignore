@@ -1,0 +1,17 @@
+# Java
+medpharm-backend/target/
+*.class
+
+# Angular
+medpharm-frontend/node_modules/
+medpharm-frontend/dist/
+.angular/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
