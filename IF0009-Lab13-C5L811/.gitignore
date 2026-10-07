@@ -15,3 +15,5 @@ medpharm-frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+cp.txt
