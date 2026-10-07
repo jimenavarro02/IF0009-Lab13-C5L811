@@ -161,3 +161,12 @@ feat(angular): add reactive recipe forms and signals dashboard
 - [ ] README documenta el error y la soluciÃ³n.
 - [ ] Se realizaron mÃ­nimo 5 commits semÃ¡nticos.
 - [ ] Repositorio GitHub pÃºblico con nombre `IF0009-Lab13-carnet`.
+
+## 14. Resultado de la prueba JWT
+
+Durante la prueba de depuración se desactivó temporalmente el uthInterceptor en Angular. Al realizar una solicitud a GET /api/v1/recetas, la petición fue enviada sin la cabecera Authorization: Bearer <token>.
+
+Debido a que el endpoint está protegido por Spring Security, el servidor rechazó la solicitud al no recibir un JWT válido. La evidencia de esta prueba se encuentra en docs/error_jwt_401.png.
+
+Después de la prueba, se restauró el interceptor en pp.config.ts mediante withInterceptors([authInterceptor]). Con el interceptor activo, Angular agrega automáticamente el JWT a las solicitudes protegidas.
+
