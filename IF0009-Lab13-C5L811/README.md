@@ -170,3 +170,10 @@ Debido a que el endpoint está protegido por Spring Security, el servidor rechazó
 
 Después de la prueba, se restauró el interceptor en pp.config.ts mediante withInterceptors([authInterceptor]). Con el interceptor activo, Angular agrega automáticamente el JWT a las solicitudes protegidas.
 
+
+## 15. Verificación final
+
+Se verificó el funcionamiento de la autenticación JWT realizando el inicio de sesión con un usuario de prueba y utilizando el token obtenido para acceder a los endpoints protegidos de medicamentos y recetas.
+
+La solicitud sin token fue rechazada por Spring Security, mientras que la solicitud con la cabecera Authorization: Bearer <token> permitió acceder correctamente a los recursos protegidos.
+
